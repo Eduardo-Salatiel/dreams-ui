@@ -1,0 +1,54 @@
+@import "./../../../scss/index.scss";
+
+.components-slider {
+  position: relative;
+  min-width: 320px;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .fa-arrow-circle-right {
+    right: 30%;
+    bottom: -50px;
+  }
+
+  .fa-arrow-circle-left {
+    left: 30%;
+    bottom: -50px;
+  }
+
+  .slide {
+    opacity: 0;
+    transition: 0.5s;
+
+    &.active {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+}
+
+//TABLET Y DESKTOP
+.components-slider {
+  @include tablet {
+    width: 90%;
+
+    .fa-arrow-circle-right {
+      right: 0;
+      top: 50%;
+    }
+
+    .fa-arrow-circle-left {
+      left: 0;
+      top: 50%;
+    }
+  }
+}

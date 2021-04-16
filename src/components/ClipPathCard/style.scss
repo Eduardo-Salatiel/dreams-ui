@@ -1,0 +1,86 @@
+.clip-path-card {
+    font-family: 'consolas';
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 20px 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #fff;
+
+    //IMAGEN
+    .clip-path-card-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        clip-path: circle(400px at center 100px);
+        transition: 0.5s;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &:hover .clip-path-card-image {
+        clip-path: circle(100px at center 100px); 
+    }
+
+    //CONTENIDO
+    .clip-path-card-content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 55%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+
+        h2 {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 5px;
+        }
+
+        button {
+            background: #000;
+            color: #FFF;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.9s;
+        }
+
+        h2, button, p {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.5s;
+        }
+    }
+
+    &:hover .clip-path-card-content {
+        h2 {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.4s;
+        }
+
+        p {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.6s;
+        }
+
+        button {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.8s;
+        }
+    }
+}

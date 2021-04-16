@@ -1,0 +1,83 @@
+.mousemove-product-card {
+  transform-style: preserve-3d;
+  max-width: 300px;
+
+  .card {
+    position: relative;
+    background-color: #122936;
+    border-radius: 20px;
+    min-width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+
+    .name {
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: center;
+      width: 100%;
+      color: #fff;
+      opacity: 0;
+      transform: translate3d(0, 0, 75px);
+      transition: 0.5s;
+      z-index: 10;
+      transform-style: preserve-3d;
+    }
+
+    &:hover .name {
+      top: 40px;
+      opacity: 1;
+    }
+
+    //BOTON
+    .buy {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform-style: preserve-3d;
+      transform: translate3d(-50%, 0, 75px);
+      color: #fff;
+      background-color: #9bdc28;
+      text-decoration: none;
+      border-radius: 20px;
+      padding: 10px 25px;
+      transition: 0.5s;
+      opacity: 0;
+      z-index: 10;
+    }
+
+    &:hover .buy {
+      bottom: 30px;
+      opacity: 1;
+    }
+
+    //CIRCULO
+    .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: #9bdc28;
+      border-radius: 50%;
+      transform-style: preserve-3d;
+      transform: translate3d(-50%, -50%, 50px);
+      transition: 0.5s;
+      width: 200px;
+      height: 200px;
+      z-index: 10;
+    }
+    //IMAGEN
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      transform: translate3d(-50%, -50%, 50px) rotate(-15deg) scaleX(-1);
+      transform-style: preserve-3d;
+      z-index: 11;
+    }
+
+    &:hover img {
+      transform: translate3d(-50%, -50%, 100px) rotate(-15deg) scaleX(-1);
+    }
+  }
+}

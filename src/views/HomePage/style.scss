@@ -1,0 +1,37 @@
+@import './../../scss/index.scss';
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  transition: 0.5s;
+
+  .home-page-rigth-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    opacity: 1;
+
+    &.active {
+      opacity: 0;
+    }
+  }
+}
+
+.home-page {
+  @include tablet {
+    .home-page-rigth-child {
+      transition: 0.5s;
+  
+      &.active {
+        display: flex;
+        margin-left: 300px;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+

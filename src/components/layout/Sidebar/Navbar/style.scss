@@ -1,0 +1,30 @@
+@import './../../../../scss/index.scss';
+
+.navbar {
+  margin-top: 70px;
+
+  ul {
+    li {
+      display: inline-block;
+      width: 100%;
+      list-style: none;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      padding: 10px 0;
+      text-align: center;
+      color: #fff;
+
+      &:hover {
+        background-color: #03a9f4;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//Tablet Desktop
+.navbar {
+  @include tablet {
+    margin-top: 50px;
+  }
+}

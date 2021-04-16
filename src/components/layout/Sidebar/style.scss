@@ -1,0 +1,24 @@
+@import './../../../scss/index.scss';
+
+.sidebar {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -700px;
+    background-color: #003147;
+    transition: 0.425s;
+    z-index: 9;
+
+    &.active {
+        left: 0;
+    }
+}
+
+//TABLET & DESKTOP
+
+.sidebar {
+    @include tablet {
+        width: 300px;
+    }
+}
